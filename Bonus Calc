@@ -1,0 +1,27 @@
+monthly_salary = float(input("What is your montly salary? "))
+years_worked = float(input("How many years have you worked here? "))
+# these two variables could be read from database or file
+bonus_rate = 0.15 # 15% bonus
+bonus_threshold = 2
+
+if years_worked < bonus_threshold:
+    print("Your bonus amount is 0! Don't be sad, your bonus is coming next year, keep up the good work!")
+else:
+    # bonus_amount = (years_worked - 2) * monthly_salary * bonus_rate
+    # bonus_amount = round(bonus_amount, 2) # let's hope our employees like round numbers with cents
+    bonus_amount = round((years_worked - bonus_threshold) * monthly_salary * bonus_rate, 2) # same as above two lines
+    print("Your bonus amount is", bonus_amount)
+    print(f"Your bonus amount is {bonus_amount}") # I pefer this syntax
+    # print("Your bonus comes up to " + str(monthly_salary * bonus_rate * years_worked)) # not quite right
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
